@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap"
+            rel="stylesheet"
+        />
+        <title>Calculator</title>
+
+        <!-- ion icons -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+
+        <!-- my files -->
+        <link rel="stylesheet" href="calculator.css" />
+        <script defer src="calculator.js"></script>
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display-wrap">
+                <div class="prev-display"></div>
+                <div class="display">0</div>
+            </div>
+            <div class="btn-wrap">
+                <button id="clean" class="btn-operator">C</button>
+
+                <button id="delete" class="btn-operator btn-delete">
+                    <ion-icon
+                        class="delete-icon"
+                        name="backspace-outline"
+                    ></ion-icon>
+                </button>
+
+                <button id="percent" class="operator btn-operator">%</button>
+                <button id="divisor" class="operator btn-operator">/</button>
+                <button class="num">1</button>
+                <button class="num">2</button>
+                <button class="num">3</button>
+                <button id="multiplication" class="operator btn-operator">
+                    X
+                </button>
+                <button class="num">4</button>
+                <button class="num">5</button>
+                <button class="num">6</button>
+                <button id="subtraction" class="operator btn-operator">
+                    -
+                </button>
+                <button class="num">7</button>
+                <button class="num">8</button>
+                <button class="num">9</button>
+                <button id="sum" class="operator btn-operator">+</button>
+                <button class="num border-radius-btm--left">.</button>
+                <button class="num">0</button>
+                <button
+                    id="equals"
+                    class="btn-operator border-radius-btm--right equal"
+                >
+                    =
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
