@@ -76,10 +76,12 @@ const compute = function () {
 };
 
 // EVENT LISTENERS
-
 btnNumEl.forEach((btn) => {
     btn.addEventListener('click', function (event) {
+        // avoid bug when user has already clicked on dot
         if (currentNum.includes('.') && event.target.innerText === '.') return;
+        // avoid number higher then 10
+        if (currentNum.length === 10) return;
 
         appendNum(event.target.innerText);
     });
@@ -87,13 +89,17 @@ btnNumEl.forEach((btn) => {
 
 operatorsEl.forEach((button) => {
     button.addEventListener('click', function (e) {
-        if (operator !== '') compute();
+        if (operator !== '' && currentNum !== '') compute();
+
+        // prevent a NAN bug when click in operator multiple times
+        if (operator !== '' && currentNum === '') return;
 
         operator = e.target.innerText;
         prevNum = currentNum;
 
         updateDisplay();
         currentNum = '';
+        displayEl.textContent = '0';
     });
 });
 
